@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-user-select:none;
+  -webkit-user-drag: none;
+  -webkit-app-region: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: burlywood;
+  display: grid;
+  place-content: center;
+  font-family: 'Roboto' sans-serif;
+  height: 100vh;
+  font-size: 2rem;
+}
+.container{
+  height: 80vh;
+  width: 50vh;
+  background-color: black;
+  border-radius: 1em;
+  padding: 1em;
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.wrapper{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.screen{
+  grid-column: 1 / -1;
+  color: antiquewhite;
+  text-align: right;
+ 
+  font-size: 4rem;
+  overflow: hidden;
+}
+
+.btn{
+  display: grid;
+  place-content: center;
+  background-color: rgb(54, 52, 52);
+  border-radius: 50%;
+  color: antiquewhite;
+  cursor: pointer;
+  font-weight: bold;
+}
+.btn:hover{
+ background-color: gold ;
+}
+
+.light-gray{
+  background-color: gray;
+  color: black;
+  font-weight: 600;
+}
+.light-gray:hover{
+  background-color: whitesmoke;
+}
+.orange{
+  background-color: orange;
+  color: black;
+}
+.orange:hover{
+  background-color: whitesmoke;
+}
+.zero{
+  grid-column: 1 / span 2;
+  border-radius: 35px;
+  place-content: unset;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  text-align: center;
+  padding-left: 0.2rem;
 }
